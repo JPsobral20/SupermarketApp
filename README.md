@@ -70,15 +70,15 @@ Open the project in Android Studio, allow Gradle to synchronize, and run the app
 
 ```text
 SupermarketApp/
-├── app/                    # Android application
+├── app/                      # Android application
 │   └── src/main/
-│       ├── java/            # Kotlin source code
-│       └── res/             # Android resources
-├── nodeServer/              # Backend server
+│       ├── java/             # Kotlin source code
+│       └── res/              # Android resources
+├── nodeServer/               # Backend server
 │   ├── database/             # Database operations
 │   ├── middleware/           # API routes and business logic
 │   └── server.js             # Server entry point
-├── gradle/                  # Gradle configuration
+├── gradle/                   # Gradle configuration
 ├── build.gradle.kts
 └── settings.gradle.kts
 ```
