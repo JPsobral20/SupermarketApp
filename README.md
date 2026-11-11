@@ -1,114 +1,95 @@
-# 🛒 ACME Supermarket App
+# 🛒 SupermarketApp
 
-A **local-first** Android supermarket application enabling customers to purchase products without staff assistance. Combines security, convenience, and seamless checkout using QR codes and NFC technology.
+A local-first Android application designed to make supermarket shopping more convenient and autonomous. The app allows customers to manage their shopping experience, scan shopping lists, apply vouchers, and complete checkout using QR codes and NFC technology.
 
----
+## ✨ Features
 
-## ✨ Key Features
-
-- **Reactive & Seamless UI** – Smooth, responsive interface built in Kotlin
-- **Secure Authentication** – Encrypted local storage with server-side validation for enhanced security
-- **Smart Shopping** – Scan product QR codes to add items to your virtual basket
-- **Voucher System** – Apply discount vouchers at checkout for reduced pricing
-- **Flexible Checkout** – Complete purchases via QR code scan or NFC technology
-- **Server Validation** – Critical operations verified with the supermarket server for security and accuracy
-
-> For comprehensive technical details, see the [Project Report](./CPM%20Report%20-%20Supermarket.pdf).
-
----
+- **User Authentication** – Secure registration and login using cryptographic keys and nonce-based signature verification.
+- **Product Management** – Browse products and manage a personal shopping list.
+- **QR Code Integration** – Scan QR codes to import encrypted shopping lists.
+- **NFC Integration** – Transfer and read shopping list information using NFC.
+- **Shopping Cart** – Review products, quantities, and prices before checkout.
+- **Voucher System** – Generate, manage, and apply discount vouchers.
+- **Secure Checkout** – Server-side transaction validation and price calculation.
+- **Purchase History** – Retrieve previous transactions.
+- **Shopping Analytics** – Access purchase statistics, spending information, and frequently purchased products.
 
 ## 🛠️ Tech Stack
 
-| Component | Technology |
-|-----------|-----------|
-| **Mobile App** | Kotlin (Android) |
-| **Backend** | Node.js + Express |
-| **Database** | SQL |
-| **Authentication** | Encrypted Local Storage + Server Validation |
+| Component | Technologies |
+|---|---|
+| Mobile Application | Kotlin, Android SDK |
+| Backend | Node.js, Koa |
+| Database | SQLite |
+| QR Code Scanning | ZXing |
+| Security | RSA, ECC, AES, Bcrypt |
+| Build System | Gradle, Kotlin DSL |
 
----
+## 🏗️ Architecture
 
-## 📸 Screenshots
+The project follows a client-server architecture:
 
-### Main Screen
-<img width="412" height="838" alt="Main Shopping Screen" src="https://github.com/user-attachments/assets/8b59bc1e-c850-4b1f-b647-6b7e33be6a4a" />
-
-### Login & Registration
-<img width="393" height="815" alt="Register Page" src="https://github.com/user-attachments/assets/c1c21563-a00a-4b6c-a0ba-b8def4b03175" />
-
-### Shopping Cart
-<img width="377" height="806" alt="Basket Page" src="https://github.com/user-attachments/assets/26d53687-56a0-4b88-8baf-e6ea253db47a" />
-
-### Checkout
-<img width="369" height="796" alt="Checkout Page" src="https://github.com/user-attachments/assets/1cdb8e99-b7d5-4066-b6b3-143d9ded0162" />
-
----
+- **Android Client:** Handles the user interface, authentication, shopping lists, QR/NFC interactions, and checkout experience.
+- **Backend Server:** Provides REST API endpoints for user management, products, vouchers, transactions, and analytics.
+- **Database:** SQLite is used to persist user information, products, vouchers, and transaction records.
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Android Studio (latest version)
+
+- Android Studio
 - JDK 11 or higher
-- Node.js 14+ (for backend server)
-- Gradle 7.0+
+- Node.js
+- An Android device or emulator
+- NFC-compatible device for NFC functionality
 
-### Installation
+### 1. Clone the repository
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd ACME_SupermarketApp
-   ```
+```bash
+git clone https://github.com/JPsobral20/SupermarketApp.git
+cd SupermarketApp
+```
 
-2. **Build the Android app**
-   ```bash
-   ./gradlew build
-   ```
+### 2. Configure the backend
 
-3. **Set up the backend server**
-   ```bash
-   cd nodeServer
-   npm install
-   npm start
-   ```
+```bash
+cd nodeServer
+npm install
+```
 
-4. **Deploy to device/emulator**
-   ```bash
-   ./gradlew installDebug
-   ```
+Start the server using:
 
----
+```bash
+node server.js
+```
+
+The backend listens on port `8000`.
+
+### 3. Run the Android application
+
+Open the project in Android Studio, allow Gradle to synchronize, and run the application on an Android device or emulator.
+
+**Note:** Configure the backend server URL in the Android application to match your development environment. An emulator and a physical device may require different network addresses.
 
 ## 📁 Project Structure
 
+```text
+SupermarketApp/
+├── app/                    # Android application
+│   └── src/main/
+│       ├── java/            # Kotlin source code
+│       └── res/             # Android resources
+├── nodeServer/              # Backend server
+│   ├── database/             # Database operations
+│   ├── middleware/           # API routes and business logic
+│   └── server.js             # Server entry point
+├── gradle/                  # Gradle configuration
+├── build.gradle.kts
+└── settings.gradle.kts
 ```
-ACME_SupermarketApp/
-├── app/                          # Android Application
-│   ├── src/main/
-│   │   ├── java/                 # Kotlin source code
-│   │   └── res/                  # UI resources (layouts, drawables, values)
-│   └── build.gradle.kts
-├── nodeServer/                   # Backend Server
-│   ├── server.js                 # Express server entry point
-│   ├── database/                 # Database operations
-│   ├── middleware/               # API routes & middleware
-│   └── package.json
-└── gradle/                       # Gradle configuration
-```
 
----
+## 🎯 Project Goals
 
-## 🔒 Security Features
+This project explores how mobile technologies, cryptographic mechanisms, and contactless communication can improve the supermarket shopping experience.
 
-- **Encrypted Authentication** – User credentials securely stored and transmitted
-- **Server Validation** – All critical transactions verified server-side
-- **Secure Checkout** – Final prices confirmed with server to prevent tampering
-- **QR/NFC Support** – Contactless, tamper-proof transaction initiation
-
----
-
----
-
-## 👤 Contact
-
-Email: rafael2003t.18@gmail.com
+It combines Android development with backend services and database integration to provide a more autonomous, convenient, and secure shopping process.
