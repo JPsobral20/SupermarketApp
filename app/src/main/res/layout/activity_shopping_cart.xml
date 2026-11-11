@@ -1,0 +1,147 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/background_orange">
+
+    <ImageView
+        android:id="@+id/personWavingImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/basket"
+        android:contentDescription="Supermarket Image"/>
+
+
+    <TableLayout
+        android:id="@+id/cartTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:padding="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Shopping Cart"
+            android:textColor="@color/dark_orange"
+            android:textSize="46sp" />
+
+        <!-- Table Header -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:background="@color/dark_orange">
+
+            <!-- Product Name Header -->
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Name"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <!-- Quantity Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Quant"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <!-- Price Header -->
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Price"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <!-- Actions Header -->
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Actions"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- Shopping Cart Items will be added here dynamically -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="Shopping cart items">
+        <LinearLayout
+            android:id="@+id/cartContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/scanProductButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/scan_product"
+        android:textSize="24sp"
+        app:cornerRadius="12dp"
+        android:backgroundTint="@color/white"
+        android:padding="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@color/dark_orange"/>
+
+    <!-- Checkout Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/checkoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Checkout"
+        android:textSize="24sp"
+        app:cornerRadius="12dp"
+        android:backgroundTint="@color/dark_orange"
+        android:padding="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@android:color/white"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Go Back"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:minHeight="50dp"
+        android:padding="6dp"
+        app:cornerRadius="12dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="48dp"
+        android:layout_marginHorizontal="16dp"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintTop_toBottomOf="@id/checkoutButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</LinearLayout>

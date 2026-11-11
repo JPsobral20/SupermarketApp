@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@drawable/background_blue">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- TITLE -->
+        <TextView
+            android:id="@+id/tvAnalyticsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Analytics"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:textSize="48sp"
+            android:textColor="@color/blue"
+            android:paddingBottom="24dp" />
+
+        <!-- CONTAINER -->
+        <LinearLayout
+            android:id="@+id/analyticsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_white_container"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="12dp">
+
+            <!-- Total Spent -->
+            <TextView
+                android:id="@+id/tvTotalSpent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Spent: $0.00"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="32sp"
+                android:textColor="@color/dark_orange"
+                android:paddingBottom="8dp" />
+
+            <!-- Purchase Count -->
+            <TextView
+                android:id="@+id/tvPurchaseCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of Purchases: 0"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:paddingBottom="8dp" />
+
+            <!-- Average Spend -->
+            <TextView
+                android:id="@+id/tvAvgSpend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Average Spend: $0.00"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:paddingBottom="8dp" />
+
+            <!-- Total Discount -->
+            <TextView
+                android:id="@+id/tvTotalDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Discount: $0.00"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:paddingBottom="8dp" />
+
+            <!-- Vouchers Used -->
+            <TextView
+                android:id="@+id/tvVouchersUsed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vouchers Used: 0"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:paddingBottom="24dp" />
+
+            <!-- Top Products Section -->
+            <TextView
+                android:id="@+id/tvTopProductsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top Products:"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/blue"
+                android:textSize="38sp"
+                android:paddingBottom="8dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTopProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp"
+                android:nestedScrollingEnabled="false"
+                android:textColor="@color/blue"
+                android:scrollbars="vertical" />
+        </LinearLayout>
+
+        <!-- Menu Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Go Back"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:minHeight="50dp"
+            android:padding="6dp"
+            app:cornerRadius="12dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/blue"
+            app:layout_constraintTop_toBottomOf="@id/recyclerTopProducts"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/background_blue">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GEN QR Code"
+        android:textColor="@color/blue"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_gravity="center"
+        android:textSize="46sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_white_container"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="4dp"
+        android:clipToPadding="false"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/ed_uuid"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:padding="12dp"
+                android:background="@drawable/rounded_container"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:hint="@string/ed_uuid"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:textSize="12sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bt_ugen"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:cornerRadius="12dp"
+                android:backgroundTint="@color/dark_orange"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"
+                android:text="@string/bt_ugen" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/ed_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="@string/ed_name"
+            android:layout_marginTop="12dp"
+            android:padding="12dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_container"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_price"
+                android:textColor="@color/dark_orange"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="24sp"/>
+
+            <EditText
+                android:id="@+id/ed_euros"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_container"
+                android:ems="10"
+                android:paddingStart="8dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:layout_marginStart="6dp"
+                android:hint="@string/ed_euros"
+                android:imeOptions="actionNext"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/ed_cents"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_container"
+                android:ems="10"
+                android:paddingStart="8dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:layout_marginStart="6dp"
+                android:hint="@string/ed_cents"
+                android:imeOptions="actionDone"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bt_gentag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                app:cornerRadius="12dp"
+                android:backgroundTint="@color/dark_orange"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="18sp"
+                android:text="@string/bt_gentag" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bt_dectag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:cornerRadius="12dp"
+                android:backgroundTint="@color/dark_orange"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="18sp"
+                android:text="@string/bt_dectag" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_nokey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textSize="24sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/tv_nokey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="40dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/rounded_container">
+
+            <TextView
+                android:id="@+id/tv_pubkey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="@drawable/rounded_container"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/blue"/>
+        </ScrollView>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginTop="12dp"/>
+    </LinearLayout>
+
+    <!-- Menu Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/menuButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Go Back to Menu"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:minHeight="50dp"
+        android:padding="6dp"
+        app:cornerRadius="12dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/blue"/>
+</LinearLayout>

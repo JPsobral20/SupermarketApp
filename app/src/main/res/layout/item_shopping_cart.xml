@@ -1,0 +1,73 @@
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="0dp"
+    android:gravity="center_vertical"
+    android:background="@android:color/white">
+
+    <!-- Product Name -->
+    <TextView
+        android:id="@+id/itemNameTextView"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Item Name"
+        android:textColor="@color/dark_orange"
+        android:textSize="16sp"
+        android:gravity="center" />
+
+    <!-- Quantity -->
+    <TextView
+        android:id="@+id/itemQuantityTextView"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="@color/blue"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:padding="8dp"/>
+
+    <!-- Price -->
+    <TextView
+        android:id="@+id/itemPriceTextView"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:textColor="@color/blue"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:padding="8dp"/>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/decrementButton"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dark_orange"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/incrementButton"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dark_orange"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/removeButton"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:backgroundTint="@color/dark_orange"
+            android:textColor="@android:color/holo_red_dark"/>
+    </LinearLayout>
+
+</TableRow>
