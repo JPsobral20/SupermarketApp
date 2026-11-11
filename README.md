@@ -45,11 +45,6 @@ The project follows a client-server architecture:
 
 ### 1. Clone the repository
 
-```bash
-git clone https://github.com/JPsobral20/SupermarketApp.git
-cd SupermarketApp
-```
-
 ### 2. Configure the backend
 
 ```bash
